@@ -1,0 +1,23 @@
+@import 'placeholders';
+
+body { padding: $layout-module-size; }
+
+.c-button {
+    @extend %u-display-flex, %u-flex-total-centered, %u-no-text-decoration, %u-capitalize;
+    background-color: rebeccapurple;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(#000000, 0.25);
+    color: #fff;
+    padding: $layout-module-size / 2;
+    transition: all 150ms ease;
+    width: 200px;
+
+    &:hover {
+        background-color: lighten(rebeccapurple, 15%);
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(2px);
+    }
+}
